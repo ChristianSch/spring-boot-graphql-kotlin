@@ -3,12 +3,12 @@ package com.example.graphqlserver
 import java.util.*
 
 @JvmRecord
-data class Author(val id: String, val firstName: String, val lastName: String) {
+data class Author(val id: String, val firstName: String, val lastName: String, val socialMedia: String) {
     companion object {
         private val authors = Arrays.asList(
-            Author("author-1", "Joshua", "Bloch"),
-            Author("author-2", "Douglas", "Adams"),
-            Author("author-3", "Bill", "Bryson")
+            Author("author-1", "Joshua", "Bloch", "iam.com/jb"),
+            Author("author-2", "Douglas", "Adams", "iam.com/da"),
+            Author("author-3", "Bill", "Bryson", "iam.com/bb")
         )
 
         @JvmStatic

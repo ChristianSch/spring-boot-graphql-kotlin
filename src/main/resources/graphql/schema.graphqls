@@ -7,10 +7,15 @@ type Book {
     name: String
     pageCount: Int
     author: Author
+    published: Date
 }
 
 type Author {
     id: ID
     firstName: String
     lastName: String
+    socialMedia: SocialMediaLink
 }
+
+scalar SocialMediaLink
+scalar Date @specifiedBy(url:"https://tools.ietf.org/html/rfc3339")
